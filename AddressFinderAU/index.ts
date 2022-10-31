@@ -63,7 +63,7 @@ export class AddressFinderAU implements ComponentFramework.StandardControl<IInpu
 		this.inputElement.setAttribute("style", "width:95%;");
 		this.inputElement.addEventListener("input",this._refreshData);
 		this._addressfinderScript = document.createElement("script");
-		this._addressfinderScript.setAttribute("src", "https://api.addressfinder.io/assets/v3b/widget.js");
+		this._addressfinderScript.setAttribute("src", "https://api.addressfinder.io/assets/v3/widget.js");
 		this._container.appendChild(this._addressfinderScript);
 		this._container.appendChild(this.inputElement);		
 		container = this._container;
@@ -120,6 +120,7 @@ export class AddressFinderAU implements ComponentFramework.StandardControl<IInpu
                     "gps": "1"
                 },
                 "address_params": {
+		    "au_paf": "1"
                 },
                 "show_locations": true,
                 "location_params": {
